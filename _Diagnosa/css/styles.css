@@ -1,0 +1,220 @@
+ /* Import Font dari Google Fonts */
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+ /* Definisi Variabel CSS */
+ :root {
+     --primary-color: #0E416C;
+     --secondary-color: #1A8EC4;
+     --text-dark: #3f3b57;
+     --text-white: #ffffff;
+     --text-light: #908ca3;
+     --white: #ffffff;
+     --max-width: 1200px;
+ }
+ a {
+     text-decoration: none;
+ }
+ ul {
+     list-style: none;
+ }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Progress Bar */
+.progress-container {
+    background-color: var(--primary-color);
+    padding-top: 100px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto ;
+}
+
+.progress-container-details {
+    background-color: var(--primary-color);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto ;
+    border-radius: 20px;
+}
+
+.progress-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.step.active {
+    background-color: var(--secondary-color);
+    color: var(--text-white);
+}
+
+.progress-container p {
+    font-size: 14px;
+}
+
+/* Form Container */
+.container1 {
+    max-width: var(--max-width);
+    margin: 30px auto;
+}
+
+.question-session {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-session h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group button.option-btn {
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-group button.option-btn.selected {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-color: var(--secondary-color);
+}
+
+.form-group select,
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input[type="number"]::placeholder {
+    color: #999;
+}
+
+.checkbox-label {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.form-group.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-label span {
+    position: relative;
+    padding-left: 30px;
+}
+
+.checkbox-label span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox-label input[type="checkbox"]:checked + span::before {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    content: '\2713';
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+}
+/* Navigation Buttons */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn.primary {
+    background-color:var(--secondary-color);
+    color: #fff;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 0px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn.primary:hover {
+    background-color: var(--primary-color);
+}
+
+.btn.secondary {
+    background-color: #fff;
+    color: var(--secondary-color);
+    padding: 12px 40px;
+    margin: 0px 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn.secondary:hover {
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 10px 39px;
+}
